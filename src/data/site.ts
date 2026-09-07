@@ -504,7 +504,7 @@ export const services = [
     number: "02",
     title: "WordPress Development",
     description:
-      "Launch a modern WordPress website your team can manage easily — structured around your brand, content and business goals.",
+      "Launch a modern WordPress website your team can manage easily. Structured around your brand, content and business goals.",
     tags: ["Custom Themes", "CMS Setup", "Elementor"],
   },
   {
@@ -571,7 +571,7 @@ export const processSteps = [
 export const advantages = [
   {
     title: "Business-Focused Approach",
-    text: "Every website starts with your goals, audience and offer — not a generic template.",
+    text: "Every website starts with your goals, audience and offer, not a generic template.",
   },
   {
     title: "Clean, Modern Design",
@@ -583,7 +583,7 @@ export const advantages = [
   },
   {
     title: "Shopify, WordPress & Wix",
-    text: "The right platform for the project — chosen based on your needs and content workflow.",
+    text: "The right platform for the project. Chosen based on your needs and content workflow.",
   },
   {
     title: "Clear Communication",
@@ -640,7 +640,7 @@ export const expertise = [
 export const testimonials = [
   {
     quote:
-      "Dipu rebuilt our Shopify store from the ground up. It looks like a brand three times our size — and mobile sales went up within the first month.",
+      "Dipu rebuilt our Shopify store from the ground up. It looks like a brand three times our size, and mobile sales went up within the first month.",
     name: "Daniel Carter",
     role: "Founder & CEO",
     company: "Carter & Co.",
@@ -668,7 +668,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Our old Wix site did not represent the quality of our work. The new design is clear, polished and easy for us to update — we have received great feedback already.",
+      "Our old Wix site did not represent the quality of our work. The new design is clear, polished and easy for us to update. We have received great feedback already.",
     name: "James Anderson",
     role: "E-commerce Manager",
     company: "Urban Goods",

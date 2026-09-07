@@ -70,7 +70,7 @@ export default function About() {
             <Reveal delay={260} className="col-span-12">
               <div className="flex flex-col gap-4 border border-mist/12 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-md font-display text-[0.98rem] leading-snug text-mist/80 md:text-base">
-                  &ldquo;Good design starts with understanding the business — not the template.&rdquo;
+                  &ldquo;Good design starts with understanding the business, not the template.&rdquo;
                 </p>
                 <span className="flex shrink-0 items-center gap-2">
                   <span className="relative flex h-2 w-2">
@@ -90,17 +90,17 @@ export default function About() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-6 text-[clamp(2rem,4.8vw,3.7rem)] leading-[1.02]">
-              A Web Developer who builds around the <span className="font-serif italic text-aqua">business</span>, not the template.
+              A Web Developer who builds around the <span className="font-serif italic text-aqua">business</span>, not the template
             </h2>
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-7 max-w-xl text-[1.02rem] leading-relaxed text-mist/75">
-              <span className="font-display text-[1.08em] font-semibold tracking-[-0.01em] text-white">I&apos;m Saidul Alam Dipu</span>
-              {" "}— a Web Developer specializing in{" "}
+            <p className="mt-7 max-w-xl text-[1.02rem] leading-relaxed text-mist/75"> I&apos;m 
+              <span className="font-display text-[1.08em] font-semibold tracking-[-0.01em] text-white">Saidul Alam Dipu</span>
+              {" "}, a Web Developer specializing in{" "}
               <span className="text-aqua/90">Shopify</span>, <span className="text-aqua/90">WordPress</span>, and{" "}
               <span className="text-aqua/90">Wix</span>. I partner with founders, small businesses and growing brands to
-              design and develop websites that don&apos;t just look polished — they actually work for the business behind them.
+              design and develop websites that don&apos;t just look polished, they actually work for the business behind them.
             </p>
           </Reveal>
           <Reveal delay={220}>
