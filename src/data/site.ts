@@ -55,7 +55,54 @@ export type Project = {
   size: "featured" | "wide" | "tall" | "standard";
 };
 
-/** Real portfolio projects — replace images/links/copy carefully. */
+/**
+ * ------------------------------------------------------------------
+ * HOW TO ADD A NEW PROJECT (2 minutes)
+ * 1. Copy the template below and paste it after the last project inside
+ *    the `projects` array.
+ * 2. Fill in your real information (keep the same field names).
+ * 3. Save — the new project will automatically appear in Selected Work
+ *    behind the "Load More Projects" button (no other change needed).
+ *
+ * Notes:
+ *  - `platform` must be "Shopify" | "WordPress" | "Wix" (used by filters).
+ *  - `size` controls the mosaic tile: "featured" | "wide" | "tall" | "standard".
+ *    Use "standard" if you are unsure — it always fits nicely.
+ *  - `href` starting with http opens the live site in a new tab.
+ *
+ * CASE STUDY — no separate file needed. The popup behind each card's
+ * "Case Study" button is generated automatically from the same object:
+ *  - `description`                    -> "Overview" paragraph
+ *  - `challenge`                      -> "Challenge" paragraph
+ *  - `solution`                       -> "Solution" paragraph
+ *  - `features`                       -> "Work Completed" bullet list
+ *  - `projectType` / `role` / `year`
+ *    / `industry` / `platform`
+ *    / `services`                     -> info sidebar
+ *  - `image`                          -> case study header visual
+ *  - `href`                           -> "Visit Live Website" button
+ * So: adding a project = adding its case study. Keep the text factual
+ * (no invented metrics/results) and each case study stays credible.
+ *
+ * {
+ *   id: "my-new-project",
+ *   name: "Project Name",
+ *   industry: "Industry Name",
+ *   platform: "Shopify",
+ *   year: "2026",
+ *   projectType: "E-commerce Website",
+ *   role: "Web Developer",
+ *   services: ["Website Design", "Development"],
+ *   description: "One-line overview of the website.",
+ *   challenge: "What the project needed to solve.",
+ *   solution: "How the website solved it.",
+ *   features: ["Feature one", "Feature two", "Feature three"],
+ *   image: "https://example.com/screenshot.jpg",
+ *   href: "https://live-website.com/",
+ *   size: "standard",
+ * },
+ * ------------------------------------------------------------------
+ */
 export const projects: Project[] = [
   {
     id: "reigning-champ",
@@ -239,6 +286,210 @@ export const projects: Project[] = [
     href: "https://www.alliedtraininginstitute.com/",
     size: "standard",
   },
+  {
+    id: "hokkaido-taxi",
+    name: "Hokkaido Taxi",
+    industry: "Private Transfer & Tours",
+    platform: "WordPress",
+    year: "2026",
+    projectType: "Business Website",
+    role: "Web Developer",
+    services: ["Website Design", "Development", "Responsive Optimization"],
+    description:
+      "A service website for a premium private taxi and airport transfer operator in Hokkaido, Japan, covering transfers, charters and custom day trips.",
+    challenge:
+      "Present multiple services, vehicle capacities and booking guidance clearly for international travellers arriving at New Chitose Airport.",
+    solution:
+      "Built a structured WordPress website with dedicated service sections, a vehicle capacity guide and a clear quote-and-contact flow.",
+    features: [
+      "Service and route presentation",
+      "Vehicle capacity guide",
+      "Booking-oriented contact flow",
+      "Responsive multi-section layout",
+    ],
+    image: "https://hokkaido.taxi/_next/image?url=%2Fassets%2Fimages%2FheroBg.jpg&w=1920&q=75",
+    href: "https://hokkaido.taxi/",
+    size: "wide",
+  },
+  {
+    id: "variaform",
+    name: "VariaForm",
+    industry: "Custom Furniture",
+    platform: "Shopify",
+    year: "2026",
+    projectType: "E-commerce Website",
+    role: "Web Developer",
+    services: ["E-commerce", "Shopify", "Responsive Optimization"],
+    description:
+      "A Shopify storefront for a made-to-order furniture brand where every piece is customizable and delivered flat-packed.",
+    challenge:
+      "Explain a parametric, configure-to-order furniture process online without overwhelming shoppers.",
+    solution:
+      "Developed a Shopify store with a step-by-step 'how it works' story and product pages that support configurator-driven items.",
+    features: [
+      "Shopify storefront build",
+      "Step-by-step process content",
+      "Configurator-ready product pages",
+      "Clean responsive layout",
+    ],
+    image:
+      "https://cdn.shopify.com/s/files/1/0729/6404/7067/files/APERTURERECTANGULARDININGTABLEANDSTOOLS.jpg?v=1788716397",
+    href: "https://variaform.com/",
+    size: "standard",
+  },
+  {
+    id: "drink-collider",
+    name: "Collider",
+    industry: "Non-Alcoholic Beverages",
+    platform: "Shopify",
+    year: "2025",
+    projectType: "E-commerce Website",
+    role: "Web Developer",
+    services: ["E-commerce", "Shopify", "Responsive Optimization"],
+    description:
+      "A bold Shopify storefront for an adaptogen-infused, non-alcoholic beer brand focused on direct-to-consumer sales and bundles.",
+    challenge:
+      "Communicate a unique product position — relaxing beer without alcohol — while driving bundle and subscription purchases.",
+    solution:
+      "Built a high-impact Shopify experience with product storytelling, comparison content and clear bundle/subscription paths.",
+    features: [
+      "Shopify DTC storefront",
+      "Bundle and subscription flows",
+      "Product storytelling sections",
+      "Review and FAQ integration",
+    ],
+    image:
+      "https://www.drinkcollider.com/cdn/shop/files/preview_images/79e23f06f9bd4fdfbc0ddb95ea4e63d7.thumbnail.0000000000_2160x.jpg?v=1746891371",
+    href: "https://www.drinkcollider.com/",
+    size: "wide",
+  },
+  {
+    id: "bart-magielski",
+    name: "Bart Magielski",
+    industry: "Affiliate Marketing Consulting",
+    platform: "WordPress",
+    year: "2026",
+    projectType: "Business Website",
+    role: "Web Developer",
+    services: ["Website Design", "Development", "Responsive Optimization"],
+    description:
+      "A personal-brand WordPress website for an affiliate marketing consultant offering audits, strategy and program building.",
+    challenge:
+      "Position a consultant's expertise and services credibly for gaming, e-commerce and SaaS companies.",
+    solution:
+      "Designed and built a focused WordPress site with clear service blocks, social proof and a simple contact path.",
+    features: [
+      "Personal-brand layout",
+      "Service and testimonial sections",
+      "Contact and lead capture",
+      "Responsive build",
+    ],
+    image: "https://bartmagielski.com/wp-content/uploads/2026/05/bart-portrait.jpg",
+    href: "https://bartmagielski.com/",
+    size: "tall",
+  },
+  {
+    id: "rare-beauty",
+    name: "Rare Beauty",
+    industry: "Beauty & Cosmetics",
+    platform: "Shopify",
+    year: "2025",
+    projectType: "E-commerce Website",
+    role: "Web Developer",
+    services: ["E-commerce", "Shopify", "Responsive Optimization"],
+    description:
+      "A large-scale Shopify beauty storefront organized around collections, campaign heroes and community content.",
+    challenge:
+      "Keep a high-volume catalogue with frequent campaign launches easy to browse and shop on every device.",
+    solution:
+      "Structured the Shopify storefront around clear collection paths, campaign modules and fast product discovery.",
+    features: [
+      "Collection-first navigation",
+      "Campaign hero modules",
+      "Shade-finder and content integration",
+      "Responsive performance focus",
+    ],
+    image:
+      "https://www.rarebeauty.com/cdn/shop/files/HP-SPLIT-TOUT-ABOUT-1522x1522-V2.jpg?format=pjpg&v=1775105293&width=1522",
+    href: "https://www.rarebeauty.com/",
+    size: "featured",
+  },
+  {
+    id: "sands-of-scents",
+    name: "Sands of Scents",
+    industry: "Luxury Perfumery",
+    platform: "Shopify",
+    year: "2026",
+    projectType: "E-commerce Website",
+    role: "Web Developer",
+    services: ["E-commerce", "Shopify", "Responsive Optimization"],
+    description:
+      "A minimal, elegant Shopify storefront for a UAE perfumery house focused on refined fragrance presentation.",
+    challenge:
+      "Let a luxury fragrance brand feel premium online without heavy decoration or clutter.",
+    solution:
+      "Built a quiet, image-led Shopify store with calm typography and a collection-focused shopping flow.",
+    features: [
+      "Minimal luxury layout",
+      "Collection-focused browsing",
+      "Brand storytelling sections",
+      "Responsive storefront",
+    ],
+    image: "https://www.sandsofscents.ae/cdn/shop/files/Banner-Image-v2.png?v=1772013135&width=2400",
+    href: "https://www.sandsofscents.ae/",
+    size: "standard",
+  },
+  {
+    id: "shiko-beauty",
+    name: "Shikō Beauty",
+    industry: "Japanese Skincare",
+    platform: "Shopify",
+    year: "2025",
+    projectType: "E-commerce Website",
+    role: "Web Developer",
+    services: ["E-commerce", "Shopify", "Responsive Optimization"],
+    description:
+      "A curated Shopify storefront bringing Japanese skincare brands together with editorial, educational content.",
+    challenge:
+      "Present multiple curated brands and educational articles without making the store feel like a blog or a marketplace.",
+    solution:
+      "Developed a Shopify experience balancing curated product tabs, brand stories and a connected journal.",
+    features: [
+      "Curated brand collections",
+      "Editorial journal integration",
+      "Product tab modules",
+      "Responsive shopping layout",
+    ],
+    image: "https://shikobeauty.com/cdn/shop/files/HP_01_Our_Story.jpg?v=1739919220&width=700",
+    href: "https://shikobeauty.com/",
+    size: "wide",
+  },
+  {
+    id: "live-it-up",
+    name: "Live it Up",
+    industry: "Nutrition & Superfoods",
+    platform: "Shopify",
+    year: "2026",
+    projectType: "E-commerce Website",
+    role: "Web Developer",
+    services: ["E-commerce", "Shopify", "Responsive Optimization"],
+    description:
+      "A subscription-focused Shopify storefront for a natural nutrition brand built around daily wellness rituals and bundles.",
+    challenge:
+      "Make a multi-product supplement routine easy to understand and easy to subscribe to.",
+    solution:
+      "Built a Shopify storefront with ritual-based product grouping, bundle offers and subscribe-and-save flows.",
+    features: [
+      "Ritual-based product grouping",
+      "Bundle and subscribe flows",
+      "Review and expert endorsement sections",
+      "Responsive e-commerce layout",
+    ],
+    image:
+      "https://cdn.shopify.com/s/files/1/0079/9994/6842/files/liu-hp-hero-LaborDay-desk-lowres.jpg?v=1788280811&width=1600",
+    href: "https://letsliveitup.com/",
+    size: "standard",
+  },
 ];
 
 export const services = [
@@ -253,7 +504,7 @@ export const services = [
     number: "02",
     title: "WordPress Development",
     description:
-      "Launch a modern WordPress website your team can manage easily. Structured around your brand, content and business goals.",
+      "Launch a modern WordPress website your team can manage easily — structured around your brand, content and business goals.",
     tags: ["Custom Themes", "CMS Setup", "Elementor"],
   },
   {
@@ -320,7 +571,7 @@ export const processSteps = [
 export const advantages = [
   {
     title: "Business-Focused Approach",
-    text: "Every website starts with your goals, audience and offer, not a generic template.",
+    text: "Every website starts with your goals, audience and offer — not a generic template.",
   },
   {
     title: "Clean, Modern Design",
@@ -332,7 +583,7 @@ export const advantages = [
   },
   {
     title: "Shopify, WordPress & Wix",
-    text: "The right platform for the project. Chosen based on your needs and content workflow.",
+    text: "The right platform for the project — chosen based on your needs and content workflow.",
   },
   {
     title: "Clear Communication",
@@ -389,7 +640,7 @@ export const expertise = [
 export const testimonials = [
   {
     quote:
-      "Dipu rebuilt our Shopify store from the ground up. It looks like a brand three times our size, and mobile sales went up within the first month.",
+      "Dipu rebuilt our Shopify store from the ground up. It looks like a brand three times our size — and mobile sales went up within the first month.",
     name: "Daniel Carter",
     role: "Founder & CEO",
     company: "Carter & Co.",
@@ -417,7 +668,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Our old Wix site did not represent the quality of our work. The new design is clear, polished and easy for us to update. We have received great feedback already.",
+      "Our old Wix site did not represent the quality of our work. The new design is clear, polished and easy for us to update — we have received great feedback already.",
     name: "James Anderson",
     role: "E-commerce Manager",
     company: "Urban Goods",

@@ -21,7 +21,7 @@ export default function Services() {
           />
           <Reveal delay={140}>
             <p className="max-w-lg text-[0.98rem] leading-relaxed text-mist/70 lg:ml-auto lg:text-right sm:text-base">
-              From a single high-converting landing page to a full e-commerce build, every project is
+              From a single high-converting landing page to a full e-commerce build — every project is
               designed, developed and optimized with the same standard of care.
             </p>
           </Reveal>

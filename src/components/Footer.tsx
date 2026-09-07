@@ -63,6 +63,12 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <a
+              href={`mailto:${profile.email}`}
+              className="mt-6 inline-block text-sm text-mist/70 transition-colors hover:text-aqua"
+            >
+              {profile.email}
+            </a>
           </div>
         </div>
 

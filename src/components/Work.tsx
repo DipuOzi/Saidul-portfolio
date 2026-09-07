@@ -276,14 +276,27 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
   );
 }
 
+/**
+ * How many projects show before "Load More" appears. The rest (plus any new
+ * project added in src/data/site.ts) queue behind the button.
+ * 5 keeps the mosaic gap-free; raise it only in pairs that fill a 12-col row.
+ */
+const INITIAL_VISIBLE = 5;
+/** How many extra projects each "Load More" click reveals. */
+const LOAD_STEP = 4;
+
 export default function Work() {
   const [active, setActive] = useState<(typeof filters)[number]>("All");
   const [selected, setSelected] = useState<Project | null>(null);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
 
-  const visible = useMemo(
+  const filtered = useMemo(
     () => (active === "All" ? projects : projects.filter((p) => p.platform === active)),
     [active],
   );
+
+  const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
+  const remaining = filtered.length - visible.length;
 
   return (
     <section id="work" className="relative scroll-mt-24 py-16 sm:py-20 lg:py-24">
@@ -306,7 +319,10 @@ export default function Work() {
                   key={f}
                   role="tab"
                   aria-selected={active === f}
-                  onClick={() => setActive(f)}
+                  onClick={() => {
+                    setActive(f);
+                    setVisibleCount(INITIAL_VISIBLE);
+                  }}
                   className={cn(
                     "relative min-h-[44px] overflow-hidden border px-4 font-mono text-[0.66rem] uppercase tracking-[0.16em] transition-all duration-400 sm:px-5",
                     active === f
@@ -353,6 +369,24 @@ export default function Work() {
             </a>
           </div>
         </div>
+
+        {/* Load More — reveals the queued projects below the grid */}
+        {remaining > 0 && (
+          <Reveal className="mt-12 flex justify-center lg:mt-16">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((c) => c + LOAD_STEP)}
+              className="group relative inline-flex min-h-[52px] items-center gap-3 overflow-hidden border border-mist/20 px-8 font-mono text-[0.72rem] uppercase tracking-[0.18em] text-mist transition-colors duration-300 hover:border-aqua hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua"
+            >
+              <span className="absolute inset-0 -translate-y-full bg-aqua transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
+              <span className="relative z-10 flex items-center gap-3">
+                Load More Projects
+                <span className="opacity-60">({remaining})</span>
+                <Arrow className="rotate-90 transition-transform duration-400 group-hover:translate-y-1" />
+              </span>
+            </button>
+          </Reveal>
+        )}
       </div>
 
       {selected && <CaseStudyModal project={selected} onClose={() => setSelected(null)} />}

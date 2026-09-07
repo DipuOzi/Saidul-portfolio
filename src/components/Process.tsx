@@ -49,7 +49,7 @@ export default function Process() {
               How I <span className="font-serif italic text-aqua">Work</span>
             </>
           }
-          subtitle="A calm, transparent process. You always know what's happening and what comes next."
+          subtitle="A calm, transparent process — you always know what's happening and what comes next."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:grid-cols-[0.9fr_1.1fr] lg:grid-cols-[1fr_1.2fr] lg:gap-16">

@@ -16,12 +16,12 @@ export default function WhyMe() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-6 text-[clamp(1.9rem,4.4vw,3.3rem)] leading-[1.05]">
-              A partner, not just a <span className="font-serif italic text-aqua">pair of hands</span>
+              A partner, not just a <span className="font-serif italic text-aqua">pair of hands.</span>
             </h2>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 max-w-md text-[0.98rem] leading-relaxed text-mist/65 sm:text-base">
-              Clean builds, clear updates and a website you can run yourself after launch. That&apos;s the standard on
+              Clean builds, clear updates and a website you can run yourself after launch — that&apos;s the standard on
               every project.
             </p>
           </Reveal>
