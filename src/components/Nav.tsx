@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CodeTag from "./ui/CodeTag";
 import { cn } from "@/utils/cn";
 import { navLinks, profile } from "@/data/site";
 import { Arrow } from "./ui/Bits";
@@ -69,12 +70,15 @@ export default function Nav() {
           scrolled ? "py-4" : "py-6",
         )}
       >
-        <a href="#home" className="group flex flex-col leading-none">
-          <span className="font-display text-[1.2rem] font-semibold tracking-tight text-aqua sm:text-[1.35rem]">
-            {profile.name.split(" ")[0]}{" "}
-            <span className="text-white">{profile.name.split(" ").slice(1).join(" ")}</span>
+        <a
+          href="#home"
+          aria-label={`${profile.name} — ${profile.role}`}
+          className="group flex flex-col items-center leading-none"
+        >
+          <CodeTag className="text-[0.98rem] sm:text-[1.1rem]" />
+          <span className="label mt-2.5 text-[0.6rem] text-mist/45 transition-colors group-hover:text-aqua">
+            {profile.role}
           </span>
-          <span className="label mt-2 text-[0.6rem] text-mist/45">{profile.role}</span>
         </a>
 
         <ul className="hidden items-center gap-9 lg:flex">
