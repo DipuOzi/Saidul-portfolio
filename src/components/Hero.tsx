@@ -36,7 +36,7 @@ export default function Hero() {
     <>
     <section
       id="home"
-      className="relative flex min-h-screen flex-col overflow-hidden pt-24 md:pt-28 animate-item-in"
+      className="relative flex min-h-[100svh] flex-col overflow-hidden pt-24 md:pt-28 animate-item-in"
       ref={wrapRef}
     >
       {/* backdrop */}
@@ -59,7 +59,7 @@ export default function Hero() {
         className="pointer-events-none absolute -left-32 bottom-0 h-[380px] w-[380px] rounded-full bg-aqua/6 blur-[130px]"
       />
 
-      <div className="relative mx-auto grid w-full max-w-[1600px] flex-1 grid-cols-1 items-center gap-12 px-6 py-8 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-16">
+      <div className="relative mx-auto grid w-full max-w-[1600px] flex-1 grid-cols-1 items-center gap-12 px-5 py-8 sm:px-6 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-16">
         {/* ---------------- LEFT ---------------- */}
         <div className="max-w-2xl">
           <Reveal className="flex items-center gap-4">
@@ -67,7 +67,7 @@ export default function Hero() {
             <span className="label text-aqua">Web Developer</span>
           </Reveal>
 
-          <h1 className="mt-7 text-[clamp(2.6rem,7.2vw,5.4rem)] font-medium leading-[0.94] tracking-[-0.035em] text-white">
+          <h1 className="mt-7 text-[clamp(2.3rem,7.2vw,5.4rem)] font-medium leading-[0.96] tracking-[-0.035em] text-white">
             <RevealWords text="Websites That Make Your" delay={120} />
             <br className="hidden sm:block" />
             <RevealWords text="Business" delay={340} />{" "}
@@ -215,7 +215,7 @@ export default function Hero() {
       </div>
 
       {/* scroll indicator */}
-      <div className="relative mx-auto flex w-full max-w-[1600px] items-end px-6 pb-6 md:px-10 md:pb-8 lg:px-16">
+      <div className="relative mx-auto flex w-full max-w-[1600px] items-end px-5 pb-6 sm:px-6 md:px-10 md:pb-8 lg:px-16">
         <a href="#work" className="group flex items-center gap-4">
           <span className="relative block h-10 w-px overflow-hidden bg-mist/15">
             <span className="animate-scroll-line absolute inset-0 block bg-aqua" />

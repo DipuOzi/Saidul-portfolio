@@ -66,7 +66,7 @@ export default function Nav() {
       <nav
         aria-label="Main"
         className={cn(
-          "mx-auto flex max-w-[1600px] items-center justify-between px-6 transition-all duration-500 md:px-10 lg:px-16",
+          "mx-auto flex max-w-[1600px] items-center justify-between px-5 transition-all duration-500 sm:px-6 md:px-10 lg:px-16",
           scrolled ? "py-4" : "py-6",
         )}
       >

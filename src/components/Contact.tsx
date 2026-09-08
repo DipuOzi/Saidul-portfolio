@@ -15,7 +15,7 @@ type Fields = {
 const empty: Fields = { name: "", email: "", projectType: "", budget: "", details: "" };
 
 const fieldBase =
-  "peer w-full border-b bg-transparent px-0 py-4 text-[0.95rem] text-white placeholder-transparent outline-none transition-colors duration-300";
+  "peer w-full border-b bg-transparent px-0 py-4 text-base text-white placeholder-transparent outline-none transition-colors duration-300 sm:text-[0.95rem]";
 
 function labelCls(filled: boolean) {
   return cn(
@@ -99,7 +99,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative scroll-mt-24 border-t border-mist/10 py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-14 px-6 md:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-16">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-14 px-5 sm:px-6 md:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-16">
         <div>
           <SectionHeading
             label="Contact"
@@ -233,7 +233,7 @@ export default function Contact() {
                       value={values.projectType}
                       onChange={(e) => set("projectType", e.target.value)}
                       className={cn(
-                        "mt-2 w-full appearance-none border-b bg-transparent py-3.5 text-[0.95rem] text-white outline-none transition-colors duration-300",
+                        "mt-2 w-full appearance-none border-b bg-transparent py-3.5 text-base text-white outline-none transition-colors duration-300 sm:text-[0.95rem]",
                         inputBorder("projectType"),
                         !values.projectType && "text-mist/40",
                       )}
@@ -264,7 +264,7 @@ export default function Contact() {
                       value={values.budget}
                       onChange={(e) => set("budget", e.target.value)}
                       className={cn(
-                        "mt-2 w-full appearance-none border-b bg-transparent py-3.5 text-[0.95rem] text-white outline-none transition-colors duration-300",
+                        "mt-2 w-full appearance-none border-b bg-transparent py-3.5 text-base text-white outline-none transition-colors duration-300 sm:text-[0.95rem]",
                         inputBorder("budget"),
                         !values.budget && "text-mist/40",
                       )}

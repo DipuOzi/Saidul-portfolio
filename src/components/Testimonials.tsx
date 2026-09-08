@@ -20,7 +20,7 @@ export default function Testimonials() {
 
   return (
     <section className="relative border-t border-mist/10 py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-[1600px] px-5 sm:px-6 md:px-10 lg:px-16">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <Reveal>
             <SectionLabel>Testimonials</SectionLabel>
@@ -77,7 +77,7 @@ export default function Testimonials() {
                       )}
                       aria-hidden={index !== i}
                     >
-                    <blockquote className="max-w-4xl text-balance font-display text-[clamp(1.4rem,3.4vw,2.6rem)] font-normal leading-[1.22] tracking-[-0.02em] text-white/90">
+                    <blockquote className="max-w-4xl text-balance font-display text-[clamp(1.3rem,3.4vw,2.6rem)] font-normal leading-[1.22] tracking-[-0.02em] text-white/90">
                       {t.quote}
                     </blockquote>
                     <figcaption className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2">
