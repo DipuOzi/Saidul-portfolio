@@ -8,13 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr]">
           <div>
             <a href="#home" className="group flex w-fit flex-col leading-none">
-              <span className="font-display text-[0.98rem] font-semibold tracking-tight text-aqua sm:text-[1.05rem]">
+              <span className="font-display text-[1.2rem] font-semibold tracking-tight text-aqua sm:text-[1.35rem]">
                 {profile.name.split(" ")[0]}{" "}
-                <span className="text-mist/70 transition-colors group-hover:text-white">
-                  {profile.name.split(" ").slice(1).join(" ")}
-                </span>
+                <span className="text-white">{profile.name.split(" ").slice(1).join(" ")}</span>
               </span>
-              <span className="label mt-1.5 text-[0.55rem] text-mist/50">{profile.role}</span>
+              <span className="label mt-2 text-[0.6rem] text-mist/50">{profile.role}</span>
             </a>
             <p className="label mt-3 text-mist/45">{profile.stack}</p>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-mist/55">
@@ -63,12 +61,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <a
-              href={`mailto:${profile.email}`}
-              className="mt-6 inline-block text-sm text-mist/70 transition-colors hover:text-aqua"
-            >
-              {profile.email}
-            </a>
           </div>
         </div>
 

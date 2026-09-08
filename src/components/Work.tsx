@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import ctaBackdrop from "@/assets/cta-next-project.jpg";
 import { cn } from "@/utils/cn";
 import { projects, type Project } from "@/data/site";
 import { Arrow, Button, SectionHeading } from "./ui/Bits";
@@ -351,18 +352,30 @@ export default function Work() {
           ))}
 
           <div
-            className="animate-item-in group col-span-1 flex flex-col justify-between border border-mist/12 p-6 transition-colors duration-500 hover:border-aqua/40 sm:p-7 md:col-span-2 lg:col-span-7"
+            className="animate-item-in group relative col-span-1 flex flex-col justify-between overflow-hidden border border-mist/12 p-6 transition-colors duration-500 hover:border-aqua/40 sm:p-7 md:col-span-2 lg:col-span-7"
             style={{ animationDelay: `${visible.length * 70}ms` }}
           >
-            <div>
+            {/* premium backdrop — visual only, content stays on top */}
+            <img
+              src={ctaBackdrop}
+              alt=""
+              aria-hidden
+              loading="lazy"
+              decoding="async"
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/35 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+
+            <div className="relative">
               <p className="label text-teal">Next Project</p>
-              <p className="mt-5 max-w-md font-display text-[clamp(1.4rem,2.5vw,2.2rem)] leading-[1.08] text-white">
+              <p className="mt-5 max-w-md font-display text-[clamp(1.4rem,2.5vw,2.2rem)] leading-[1.08] text-white [text-shadow:0_2px_16px_rgba(11,12,16,0.9)]">
                 Your project could be the next one featured here.
               </p>
             </div>
             <a
               href="#contact"
-              className="mt-8 inline-flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-mist transition-colors hover:text-aqua"
+              className="relative mt-8 inline-flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-mist transition-colors hover:text-aqua"
             >
               Start a Project
               <Arrow className="transition-transform duration-500 group-hover:translate-x-1.5" />

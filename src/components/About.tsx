@@ -95,9 +95,9 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-7 max-w-xl text-[1.02rem] leading-relaxed text-mist/75"> I&apos;m 
-              <span className="font-display text-[1.08em] font-semibold tracking-[-0.01em] text-white">Saidul Alam Dipu</span>
-              {" "}, a Web Developer specializing in{" "}
+            <p className="mt-7 max-w-xl text-[1.02rem] leading-relaxed text-mist/75"> I&apos;m
+              <span className="font-display text-[1.08em] font-semibold tracking-[-0.01em] text-white"> Saidul Alam Dipu</span>
+              {""}, a Web Developer specializing in{" "}
               <span className="text-aqua/90">Shopify</span>, <span className="text-aqua/90">WordPress</span>, and{" "}
               <span className="text-aqua/90">Wix</span>. I partner with founders, small businesses and growing brands to
               design and develop websites that don&apos;t just look polished, they actually work for the business behind them.
